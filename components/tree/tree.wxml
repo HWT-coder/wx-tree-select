@@ -9,7 +9,7 @@
       <image data-item="{{item}}" catchtap="__checkboxTreeItem" wx:if="{{item.checked === 0}}"
         src="../../assets/images/unchoice.png" class="check-box"></image>
       <image data-item="{{item}}" catchtap="__checkboxTreeItem" wx:if="{{item.checked === -1}}"
-        src="../../assets/images/unfullchoice.png" class="check-box"></image>
+        src="../../assets/images/unfullChoice.png" class="check-box"></image>
       <text catchtap="__checkboxTreeItem" data-item="{{item}}" class="tree-item-title">{{
         item.label
         }}</text>
