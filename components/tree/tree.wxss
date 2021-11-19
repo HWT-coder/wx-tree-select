@@ -1,0 +1,43 @@
+.tree_container {
+  width: auto;
+  box-sizing: border-box;
+  overflow: scroll;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  background: #fff;
+}
+
+.tree-item {
+  width: auto;
+  box-sizing: border-box;
+  overflow-x: scroll;
+  padding: 10rpx 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tree-item-title {
+  flex: 8;
+  margin-left: 24rpx;
+  color: #1c2438;
+  font-size: 32rpx;
+  word-break: break-all;
+}
+
+.collapse {
+  width: 36rpx;
+  height: 20rpx;
+  transform: rotate(-90deg);
+}
+
+.expand {
+  width: 36rpx;
+  height: 20rpx;
+}
+
+.check-box {
+  height: 32rpx;
+  width: 32rpx;
+  margin-left: 30rpx;
+}

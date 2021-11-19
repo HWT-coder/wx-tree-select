@@ -1,0 +1,3 @@
+<view>
+  <tree treeList="{{treeList}}" bind:change="treeTap"> </tree>
+</view>

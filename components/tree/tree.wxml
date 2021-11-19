@@ -1,0 +1,24 @@
+<view class="tree_container">
+  <block wx:for="{{treeList}}" wx:key="id">
+    <!-- 一级菜单 -->
+    <view style="margin-left: {{treeListIndex*40}}rpx" class="tree-item item-class">
+      <image src="../../assets/images/u1490.svg" wx:if="{{item.children !== undefined && item.children.length > 0}}"
+        class="{{!item.collapse ? 'expand' : 'collapse'}}" data-item="{{item}}" catchtap="toggleCollapse" />
+      <image data-item="{{item}}" wx:if="{{item.checked === 1}}" src="../../assets/images/choice.png" class="check-box"
+        catchtap="__checkboxTreeItem"></image>
+      <image data-item="{{item}}" catchtap="__checkboxTreeItem" wx:if="{{item.checked === 0}}"
+        src="../../assets/images/unchoice.png" class="check-box"></image>
+      <image data-item="{{item}}" catchtap="__checkboxTreeItem" wx:if="{{item.checked === -1}}"
+        src="../../assets/images/unfullchoice.png" class="check-box"></image>
+      <text catchtap="__checkboxTreeItem" data-item="{{item}}" class="tree-item-title">{{
+        item.label
+        }}</text>
+    </view>
+    <!-- 二级菜单 -->
+    <view hidden="{{item.children === undefined || item.children.length <= 0 || item.collapse }}">
+      <tree data-parent="{{item}}" treeList="{{ item.children }}" treeListIndex="{{treeListIndex+1}}"
+        bind:treeTap="handleTreeTap" bind:toggle="handleToggle">
+      </tree>
+    </view>
+  </block>
+</view>
